@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коллекции GitHub - Карта сайта</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2a1a2a, #1a0f1a);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #24292e, #2a1a2a);
+            color: white;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
+            border-bottom: 4px solid #d946ef;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            background: #1e293b;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #d946ef;
+            text-decoration: none;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .collection-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+            border-left: 4px solid #d946ef;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(217,70,239,0.15);
+        }
+
+        .collection-card a {
+            color: #0366d6;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .collection-card a:hover {
+            color: #d946ef;
+        }
+
+        .collection-desc {
+            color: #475569;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .collection-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+        }
+
+        .priority-badge {
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            background: #3b82f6;
+            color: white;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #d946ef;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📂 GitHub Collections</h1>
+            <p>Тематические подборки проектов и инструментов</p>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> > <span>Коллекции</span>
+        </div>
+
+        <div class="content">
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <a href="https://github.com/collections/pixel-art-tools" target="_blank">Pixel Art Tools</a>
+                    <div class="collection-desc">Инструменты для создания пиксель-арта</div>
+                    <div class="collection-meta">
+                        <span>🎨 Design</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/github-copilot-sdk-contest-winners" target="_blank">Copilot SDK Contest Winners</a>
+                    <div class="collection-desc">Победители конкурса Copilot SDK</div>
+                    <div class="collection-meta">
+                        <span>🤖 AI</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/made-in-brazil" target="_blank">Made in Brazil</a>
+                    <div class="collection-desc">Проекты, созданные в Бразилии</div>
+                    <div class="collection-meta">
+                        <span>🌎 Regional</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/choosing-projects" target="_blank">Choosing Projects</a>
+                    <div class="collection-desc">Как выбирать проекты для contribution</div>
+                    <div class="collection-meta">
+                        <span>🎯 Open Source</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/clean-code-linters" target="_blank">Clean Code Linters</a>
+                    <div class="collection-desc">Линтеры для чистого кода</div>
+                    <div class="collection-meta">
+                        <span>🔧 Tools</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/open-journalism" target="_blank">Open Journalism</a>
+                    <div class="collection-desc">Инструменты для открытой журналистики</div>
+                    <div class="collection-meta">
+                        <span>📰 Media</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/design-essentials" target="_blank">Design Essentials</a>
+                    <div class="collection-desc">Основные инструменты для дизайнеров</div>
+                    <div class="collection-meta">
+                        <span>🎨 Design</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/music" target="_blank">Music</a>
+                    <div class="collection-desc">Музыкальные проекты и библиотеки</div>
+                    <div class="collection-meta">
+                        <span>🎵 Audio</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/government" target="_blank">Government</a>
+                    <div class="collection-desc">Проекты для государственных организаций</div>
+                    <div class="collection-meta">
+                        <span>🏛️ Public Sector</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/devops-tools" target="_blank">DevOps Tools</a>
+                    <div class="collection-desc">Инструменты для DevOps</div>
+                    <div class="collection-meta">
+                        <span>⚙️ DevOps</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/front-end-javascript-frameworks" target="_blank">Front-end JavaScript Frameworks</a>
+                    <div class="collection-desc">Фреймворки для фронтенда</div>
+                    <div class="collection-meta">
+                        <span>🖥️ Web</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/github-browser-extensions" target="_blank">GitHub Browser Extensions</a>
+                    <div class="collection-desc">Расширения для браузера для GitHub</div>
+                    <div class="collection-meta">
+                        <span>🔌 Extensions</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/github-pages-examples" target="_blank">GitHub Pages Examples</a>
+                    <div class="collection-desc">Примеры сайтов на GitHub Pages</div>
+                    <div class="collection-meta">
+                        <span>📄 Pages</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/hacking-minecraft" target="_blank">Hacking Minecraft</a>
+                    <div class="collection-desc">Модификации и инструменты для Minecraft</div>
+                    <div class="collection-meta">
+                        <span>🎮 Gaming</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/javascript-game-engines" target="_blank">JavaScript Game Engines</a>
+                    <div class="collection-desc">Игровые движки на JavaScript</div>
+                    <div class="collection-meta">
+                        <span>🎮 Gaming</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/learn-to-code" target="_blank">Learn to Code</a>
+                    <div class="collection-desc">Ресурсы для изучения программирования</div>
+                    <div class="collection-meta">
+                        <span>📚 Education</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/machine-learning" target="_blank">Machine Learning</a>
+                    <div class="collection-desc">Проекты по машинному обучению</div>
+                    <div class="collection-meta">
+                        <span>🤖 AI/ML</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/made-in-africa" target="_blank">Made in Africa</a>
+                    <div class="collection-desc">Проекты из Африки</div>
+                    <div class="collection-meta">
+                        <span>🌍 Regional</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/net-neutrality" target="_blank">Net Neutrality</a>
+                    <div class="collection-desc">Проекты за сетевой нейтралитет</div>
+                    <div class="collection-meta">
+                        <span>🌐 Internet</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/open-data" target="_blank">Open Data</a>
+                    <div class="collection-desc">Проекты с открытыми данными</div>
+                    <div class="collection-meta">
+                        <span>📊 Data</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/open-source-organizations" target="_blank">Open Source Organizations</a>
+                    <div class="collection-desc">Организации, развивающие open source</div>
+                    <div class="collection-meta">
+                        <span>🏢 Organizations</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/policies" target="_blank">Policies</a>
+                    <div class="collection-desc">Политики и правила</div>
+                    <div class="collection-meta">
+                        <span>📜 Legal</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+
+                <div class="collection-card">
+                    <a href="https://github.com/collections/productivity-tools" target="_blank">Productivity Tools</a>
+                    <div class="collection-desc">Инструменты для повышения продуктивности</div>
+                    <div class="collection-meta">
+                        <span>⚡ Productivity</span>
+                        <span class="priority-badge">0.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-button">← Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>
