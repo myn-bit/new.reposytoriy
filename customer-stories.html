@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Истории клиентов GitHub - Карта сайта</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2a1a3a, #1a0f2a);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #24292e, #2a1a3a);
+            color: white;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
+            border-bottom: 4px solid #a855f7;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            background: #1e293b;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #a855f7;
+            text-decoration: none;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .filter-section {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .filter-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-tag {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .filter-tag:hover {
+            background: #a855f7;
+            color: white;
+            border-color: #a855f7;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .story-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s;
+            border-left: 4px solid #a855f7;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(168,85,247,0.15);
+        }
+
+        .story-card a {
+            color: #0366d6;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .story-card a:hover {
+            color: #a855f7;
+        }
+
+        .company-meta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .company-tag {
+            background: #e2e8f0;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            color: #475569;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+
+        .priority-09 { background: #4ade80; color: #1e293b; }
+        .priority-08 { background: #3b82f6; color: white; }
+
+        .type-section {
+            margin-top: 40px;
+        }
+
+        .type-title {
+            font-size: 1.8em;
+            color: #1e293b;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #a855f7;
+            padding-bottom: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #a855f7;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 Истории клиентов GitHub</h1>
+            <p>Кейсы компаний, использующих GitHub</p>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> > <span>Customer Stories</span>
+        </div>
+
+        <div class="content">
+            <!-- Filters -->
+            <div class="filter-section">
+                <div class="filter-title">🔍 Фильтры</div>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="font-weight: 500; margin-bottom: 10px;">По типу:</div>
+                    <div class="filter-tags">
+                        <a href="https://github.com/customer-stories" class="filter-tag">Все</a>
+                        <a href="https://github.com/customer-stories?type=enterprise" class="filter-tag">Enterprise</a>
+                        <a href="https://github.com/customer-stories?type=team" class="filter-tag">Team</a>
+                        <a href="https://github.com/customer-stories/all" class="filter-tag">All Stories</a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <div style="font-weight: 500; margin-bottom: 10px;">По индустрии:</div>
+                    <div class="filter-tags">
+                        <a href="https://github.com/customer-stories/enterprise?industry=All" class="filter-tag">All</a>
+                        <a href="https://github.com/customer-stories/enterprise?industry=Financial%2Bservices" class="filter-tag">Financial Services</a>
+                        <a href="https://github.com/customer-stories/enterprise?industry=Healthcare%2B%2526%2BLife%2BSciences" class="filter-tag">Healthcare</a>
+                        <a href="https://github.com/customer-stories/enterprise?industry=Government" class="filter-tag">Government</a>
+                        <a href="https://github.com/customer-stories/enterprise?industry=Manufacturing" class="filter-tag">Manufacturing</a>
+                        <a href="https://github.com/customer-stories/enterprise?industry=Retail%2B%2526%2Becommerce" class="filter-tag">Retail</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div style="font-weight: 500; margin-bottom: 10px;">По функциям:</div>
+                    <div class="filter-tags">
+                        <a href="https://github.com/customer-stories/enterprise?feature=GitHub%2BCopilot" class="filter-tag">Copilot</a>
+                        <a href="https://github.com/customer-stories/enterprise?feature=GitHub%2BActions" class="filter-tag">Actions</a>
+                        <a href="https://github.com/customer-stories/enterprise?feature=GitHub%2BAdvanced%2BSecurity" class="filter-tag">Advanced Security</a>
+                        <a href="https://github.com/customer-stories/enterprise?feature=GitHub%2BCodespaces" class="filter-tag">Codespaces</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Stories -->
+            <div class="type-section">
+                <h2 class="type-title">🏢 Enterprise Stories</h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/duolingo" target="_blank">Duolingo</a>
+                        <div class="company-meta">
+                            <span class="company-tag">EdTech</span>
+                            <span class="company-tag">Copilot</span>
+                        </div>
+                        <span class="priority-badge priority-09">0.9</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/figma" target="_blank">Figma</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Design</span>
+                            <span class="company-tag">Collaboration</span>
+                        </div>
+                        <span class="priority-badge priority-09">0.9</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/mercedes-benz" target="_blank">Mercedes-Benz</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Automotive</span>
+                            <span class="company-tag">Enterprise</span>
+                        </div>
+                        <span class="priority-badge priority-09">0.9</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/mercado-libre" target="_blank">Mercado Libre</a>
+                        <div class="company-meta">
+                            <span class="company-tag">E-commerce</span>
+                            <span class="company-tag">Latin America</span>
+                        </div>
+                        <span class="priority-badge priority-09">0.9</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/accenture" target="_blank">Accenture</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Consulting</span>
+                        </div>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/astrazeneca" target="_blank">AstraZeneca</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Pharmaceutical</span>
+                        </div>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/societe-generale" target="_blank">Société Générale</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Banking</span>
+                        </div>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/pg" target="_blank">Procter & Gamble</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Consumer Goods</span>
+                        </div>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/va" target="_blank">US Department of Veterans Affairs</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Government</span>
+                        </div>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/3m" target="_blank">3M</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Manufacturing</span>
+                        </div>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/philips" target="_blank">Philips</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Healthcare</span>
+                        </div>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/doctolib" target="_blank">Doctolib</a>
+                        <div class="company-meta">
+                            <span class="company-tag">Healthcare</span>
+                        </div>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Stories -->
+            <div class="type-section">
+                <h2 class="type-title">👥 Team Stories</h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/buzzfeed" target="_blank">BuzzFeed</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/cyberagent" target="_blank">CyberAgent</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/dazn" target="_blank">DAZN</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/trustpilot" target="_blank">Trustpilot</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/buffer" target="_blank">Buffer</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/sketch" target="_blank">Sketch</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Enterprise Stories -->
+            <div class="type-section">
+                <h2 class="type-title">🌍 More Enterprise Stories</h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/telus" target="_blank">TELUS</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/kpmg" target="_blank">KPMG</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/grupoboticario" target="_blank">Grupo Boticário</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/front" target="_blank">Front</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/trayio" target="_blank">Tray.io</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/netdata" target="_blank">Netdata</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/american-airlines" target="_blank">American Airlines</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/sap" target="_blank">SAP</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/spotify" target="_blank">Spotify</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/stripe" target="_blank">Stripe</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/ford" target="_blank">Ford</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                    <div class="story-card">
+                        <a href="https://github.com/customer-stories/nubank" target="_blank">Nubank</a>
+                        <span class="priority-badge priority-08">0.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Localized versions -->
+            <div style="margin-top: 40px; background: #f1f5f9; padding: 20px; border-radius: 15px;">
+                <h3 style="margin-bottom: 15px;">🌐 Локализованные версии (en-US)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px;">
+                    <a href="https://github.com/customer-stories?locale=en-US" target="_blank">All Stories (en-US)</a>
+                    <a href="https://github.com/customer-stories/telus?locale=en-US" target="_blank">TELUS (en-US)</a>
+                    <a href="https://github.com/customer-stories/mercado-libre?locale=en-US" target="_blank">Mercado Libre (en-US)</a>
+                    <a href="https://github.com/customer-stories/kpmg?locale=en-US" target="_blank">KPMG (en-US)</a>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-button">← Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>
