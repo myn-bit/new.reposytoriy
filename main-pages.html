@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главные страницы - Карта сайта GitHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1e24 0%, #2d3748 100%);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #24292e, #1a1e24);
+            color: white;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #9ca3af;
+            font-size: 1.1em;
+        }
+
+        .breadcrumb {
+            background: #2d3748;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #4ade80;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .stats-bar {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            opacity: 0.9;
+            font-size: 1em;
+        }
+
+        .url-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .url-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .url-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #4ade80;
+        }
+
+        .url-link {
+            color: #0366d6;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            word-break: break-all;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .url-link:hover {
+            text-decoration: underline;
+            color: #4ade80;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .priority-10 { background: #ef4444; color: white; }
+        .priority-09 { background: #4ade80; color: #1e293b; }
+        .priority-08 { background: #3b82f6; color: white; }
+
+        .url-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .url-path {
+            color: #64748b;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #4ade80;
+            color: #24292e;
+            transform: translateX(-5px);
+        }
+
+        .filters {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #24292e;
+            color: white;
+            border-color: #24292e;
+        }
+
+        @media (max-width: 768px) {
+            .url-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏠 Главные страницы GitHub</h1>
+            <p>Основные разделы и ключевые страницы</p>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> > <span>Главные страницы</span>
+        </div>
+
+        <div class="content">
+            <div class="stats-bar">
+                <div class="stat">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">Всего страниц</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">1</div>
+                    <div class="stat-label">С приоритетом 1.0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">17</div>
+                    <div class="stat-label">С приоритетом 0.9</div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterUrls('all')">Все</button>
+                <button class="filter-btn" onclick="filterUrls('1.0')">Приоритет 1.0</button>
+                <button class="filter-btn" onclick="filterUrls('0.9')">Приоритет 0.9</button>
+            </div>
+
+            <div class="url-grid" id="urlGrid">
+                <!-- Главная -->
+                <div class="url-card" data-priority="1.0">
+                    <a href="https://github.com/" class="url-link" target="_blank">https://github.com/</a>
+                    <div class="url-meta">
+                        <span class="url-path">/</span>
+                        <span class="priority-badge priority-10">Приоритет 1.0</span>
+                    </div>
+                </div>
+
+                <!-- Login -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/login" class="url-link" target="_blank">https://github.com/login</a>
+                    <div class="url-meta">
+                        <span class="url-path">/login</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Pricing -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/pricing" class="url-link" target="_blank">https://github.com/pricing</a>
+                    <div class="url-meta">
+                        <span class="url-path">/pricing</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- About -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/about" class="url-link" target="_blank">https://github.com/about</a>
+                    <div class="url-meta">
+                        <span class="url-path">/about</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/security" class="url-link" target="_blank">https://github.com/security</a>
+                    <div class="url-meta">
+                        <span class="url-path">/security</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/enterprise" class="url-link" target="_blank">https://github.com/enterprise</a>
+                    <div class="url-meta">
+                        <span class="url-path">/enterprise</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Team -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/team" class="url-link" target="_blank">https://github.com/team</a>
+                    <div class="url-meta">
+                        <span class="url-path">/team</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/features" class="url-link" target="_blank">https://github.com/features</a>
+                    <div class="url-meta">
+                        <span class="url-path">/features</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Marketplace -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/marketplace" class="url-link" target="_blank">https://github.com/marketplace</a>
+                    <div class="url-meta">
+                        <span class="url-path">/marketplace</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Topics -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/topics" class="url-link" target="_blank">https://github.com/topics</a>
+                    <div class="url-meta">
+                        <span class="url-path">/topics</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Trending -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/trending" class="url-link" target="_blank">https://github.com/trending</a>
+                    <div class="url-meta">
+                        <span class="url-path">/trending</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Collections -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/collections" class="url-link" target="_blank">https://github.com/collections</a>
+                    <div class="url-meta">
+                        <span class="url-path">/collections</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Sponsors -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/sponsors" class="url-link" target="_blank">https://github.com/sponsors</a>
+                    <div class="url-meta">
+                        <span class="url-path">/sponsors</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/education" class="url-link" target="_blank">https://github.com/education</a>
+                    <div class="url-meta">
+                        <span class="url-path">/education</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Readme -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/readme" class="url-link" target="_blank">https://github.com/readme</a>
+                    <div class="url-meta">
+                        <span class="url-path">/readme</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Newsroom -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/newsroom" class="url-link" target="_blank">https://github.com/newsroom</a>
+                    <div class="url-meta">
+                        <span class="url-path">/newsroom</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Partners -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/partners" class="url-link" target="_blank">https://github.com/partners</a>
+                    <div class="url-meta">
+                        <span class="url-path">/partners</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+
+                <!-- Customer Stories -->
+                <div class="url-card" data-priority="0.9">
+                    <a href="https://github.com/customer-stories" class="url-link" target="_blank">https://github.com/customer-stories</a>
+                    <div class="url-meta">
+                        <span class="url-path">/customer-stories</span>
+                        <span class="priority-badge priority-09">Приоритет 0.9</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-button">← Вернуться на главную</a>
+        </div>
+    </div>
+
+    <script>
+        function filterUrls(priority) {
+            const cards = document.querySelectorAll('.url-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            cards.forEach(card => {
+                if (priority === 'all') {
+                    card.style.display = '';
+                } else {
+                    const cardPriority = card.getAttribute('data-priority');
+                    card.style.display = cardPriority === priority ? '' : 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
