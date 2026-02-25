@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сообщество GitHub - Карта сайта</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a3a3a, #0f2a2a);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #24292e, #1a3a3a);
+            color: white;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
+            border-bottom: 4px solid #14b8a6;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            background: #1e293b;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #14b8a6;
+            text-decoration: none;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .community-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #14b8a6, #0d9488);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .discussions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .discussion-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .category-group {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 4px solid #14b8a6;
+        }
+
+        .category-group h3 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .category-links {
+            list-style: none;
+        }
+
+        .category-links li {
+            margin-bottom: 8px;
+        }
+
+        .category-links a {
+            color: #0366d6;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+
+        .category-links a:hover {
+            color: #14b8a6;
+            text-decoration: underline;
+        }
+
+        .recent-discussions {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .discussion-item {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .discussion-item:last-child {
+            border-bottom: none;
+        }
+
+        .discussion-item a {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .discussion-item a:hover {
+            color: #14b8a6;
+        }
+
+        .user-meta {
+            color: #64748b;
+            font-size: 0.9em;
+        }
+
+        .pagination {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .page-link {
+            padding: 5px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .priority-badge {
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            background: #3b82f6;
+            color: white;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #14b8a6;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .community-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👥 Сообщество GitHub</h1>
+            <p>Дискуссии, форумы и обсуждения</p>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> > <span>Сообщество</span>
+        </div>
+
+        <div class="content">
+            <div class="community-stats">
+                <div class="stat-card">
+                    <div class="stat-number">42</div>
+                    <div>Всего страниц</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">39</div>
+                    <div>Страниц дискуссий</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25+</div>
+                    <div>Категорий</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0.8</div>
+                    <div>Приоритет</div>
+                </div>
+            </div>
+
+            <div class="discussions-header">
+                <h2>💬 GitHub Community Discussions</h2>
+                <a href="https://github.com/orgs/community/discussions/new?category=general" style="background: #14b8a6; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none;">Новое обсуждение</a>
+            </div>
+
+            <!-- Discussion Categories -->
+            <div class="discussion-categories">
+                <div class="category-group">
+                    <h3>📢 Announcements</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/announcements" target="_blank">All Announcements</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/copilot-news-and-announcements" target="_blank">Copilot News</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/universe" target="_blank">Universe</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>🤖 Copilot</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/copilot-conversations" target="_blank">Copilot Conversations</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/copilot-news-and-announcements" target="_blank">Copilot News</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>⚙️ Actions & CI/CD</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/actions" target="_blank">Actions</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/api-and-webhooks" target="_blank">API & Webhooks</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>🔒 Security</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/code-security" target="_blank">Code Security</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/security" target="_blank">Security</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>💻 Development</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/codespaces" target="_blank">Codespaces</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/pull-requests" target="_blank">Pull Requests</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/code-search-and-navigation" target="_blank">Code Search</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>📦 Packages & Registry</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/npm" target="_blank">npm</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/packages" target="_blank">Packages</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>📄 Pages & Docs</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/pages" target="_blank">GitHub Pages</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>👤 Profile & Account</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/profile" target="_blank">Profile</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/sponsors" target="_blank">Sponsors</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>🎓 Education</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/github-education" target="_blank">GitHub Education</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>📱 Mobile</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/mobile" target="_blank">Mobile</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>🤝 General</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/general" target="_blank">General</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/new-to-github" target="_blank">New to GitHub</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/programming-help" target="_blank">Programming Help</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/accessibility" target="_blank">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>📊 Discover & Feed</h3>
+                    <ul class="category-links">
+                        <li><a href="https://github.com/orgs/community/discussions/categories/discover" target="_blank">Discover</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/feed" target="_blank">Feed</a></li>
+                        <li><a href="https://github.com/orgs/community/discussions/categories/lists" target="_blank">Lists</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recent Discussions -->
+            <div class="recent-discussions">
+                <h3 style="margin-bottom: 20px;">🔥 Недавние обсуждения</h3>
+                
+                <div class="discussion-item">
+                    <a href="https://github.com/orgs/community/discussions/186671" target="_blank">Discussion #186671</a>
+                    <span class="user-meta">by Sriramvellikad07</span>
+                </div>
+                <div class="discussion-item">
+                    <a href="https://github.com/orgs/community/discussions/186667" target="_blank">Discussion #186667</a>
+                    <span class="user-meta">by sardorazimov</span>
+                </div>
+                <div class="discussion-item">
+                    <a href="https://github.com/orgs/community/discussions/186646" target="_blank">Discussion #186646</a>
+                    <span class="user-meta">by 2030mmohmad2030-bot</span>
+                </div>
+                <div class="discussion-item">
+                    <a href="https://github.com/orgs/community/discussions/186674" target="_blank">Discussion #186674</a>
+                    <span class="user-meta">by Sophiejohny</span>
+                </div>
+                <div class="discussion-item">
+                    <a href="https://github.com/orgs/community/discussions/186673" target="_blank">Discussion #186673</a>
+                    <span class="user-meta">by sreeshanth-soma</span>
+                </div>
+                <div class="discussion-item">
+                    <a href="https://github.com/orgs/community/discussions/186670" target="_blank">Discussion #186670</a>
+                    <span class="user-meta">by NazmusSayad</span>
+                </div>
+                <div class="discussion-item">
+                    <a href="https://github.com/orgs/community/discussions/186664" target="_blank">Discussion #186664</a>
+                    <span class="user-meta">by tsolegnanu</span>
+                </div>
+                <div class="discussion-item">
+                    <a href="https://github.com/orgs/community/discussions/186545" target="_blank">Discussion #186545</a>
+                    <span class="user-meta">by Purrbyte-zdy</span>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div style="margin-top: 30px;">
+                <h3>📑 Страницы дискуссий</h3>
+                <div class="pagination">
+                    <a href="https://github.com/orgs/community/discussions?page=1" class="page-link">1</a>
+                    <a href="https://github.com/orgs/community/discussions?page=2" class="page-link">2</a>
+                    <a href="https://github.com/orgs/community/discussions?page=3" class="page-link">3</a>
+                    <a href="https://github.com/orgs/community/discussions?page=4" class="page-link">4</a>
+                    <a href="https://github.com/orgs/community/discussions?page=5" class="page-link">5</a>
+                    <a href="https://github.com/orgs/community/discussions?page=39" class="page-link">39</a>
+                    <a href="https://github.com/orgs/community/discussions?page=40" class="page-link">40</a>
+                </div>
+            </div>
+
+            <!-- Community Repositories -->
+            <div style="margin-top: 30px; background: #f8fafc; padding: 20px; border-radius: 15px;">
+                <h3 style="margin-bottom: 15px;">📦 Community Repositories</h3>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://github.com/orgs/community/repositories" target="_blank">All Repositories</a>
+                    <a href="https://github.com/orgs/community/packages" target="_blank">Packages</a>
+                    <a href="https://github.com/orgs/community/people" target="_blank">People</a>
+                    <a href="https://github.com/community/community/blob/fbd4e83b68b54914fc2729e9eaabe7e223e83b30/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-button">← Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>
