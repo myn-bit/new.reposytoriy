@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Trending - Карта сайта</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2a2a1a, #1a1a0f);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #24292e, #2a2a1a);
+            color: white;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
+            border-bottom: 4px solid #eab308;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            background: #1e293b;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #eab308;
+            text-decoration: none;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .language-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .language-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .language-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(234,179,8,0.15);
+            border-color: #eab308;
+        }
+
+        .language-card a {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        .language-card a:hover {
+            color: #eab308;
+        }
+
+        .language-code {
+            display: block;
+            font-size: 0.8em;
+            color: #64748b;
+            margin-top: 5px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #1e293b;
+            margin: 30px 0 20px;
+            border-bottom: 3px solid #eab308;
+            padding-bottom: 10px;
+        }
+
+        .developers-section {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .priority-badge {
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            background: #3b82f6;
+            color: white;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #eab308;
+            color: #24292e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📈 GitHub Trending</h1>
+            <p>Популярные репозитории по языкам программирования</p>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> > <span>Trending</span>
+        </div>
+
+        <div class="content">
+            <div style="margin-bottom: 20px;">
+                <h2 class="section-title">🌐 Все языки</h2>
+                <div style="margin-bottom: 20px;">
+                    <a href="https://github.com/trending" style="font-size: 1.2em;">Trending Home</a> 
+                    <span class="priority-badge">0.9</span>
+                </div>
+            </div>
+
+            <h2 class="section-title">🗣️ По языкам программирования</h2>
+            <div class="language-grid">
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ab">Abkhazian</a><span class="language-code">ab</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=aa">Afar</a><span class="language-code">aa</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=af">Afrikaans</a><span class="language-code">af</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ak">Akan</a><span class="language-code">ak</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sq">Albanian</a><span class="language-code">sq</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=am">Amharic</a><span class="language-code">am</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ar">Arabic</a><span class="language-code">ar</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=an">Aragonese</a><span class="language-code">an</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=hy">Armenian</a><span class="language-code">hy</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=as">Assamese</a><span class="language-code">as</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=av">Avaric</a><span class="language-code">av</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ae">Avestan</a><span class="language-code">ae</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ay">Aymara</a><span class="language-code">ay</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=az">Azerbaijani</a><span class="language-code">az</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=bm">Bambara</a><span class="language-code">bm</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ba">Bashkir</a><span class="language-code">ba</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=eu">Basque</a><span class="language-code">eu</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=be">Belarusian</a><span class="language-code">be</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=bn">Bengali</a><span class="language-code">bn</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=bh">Bihari</a><span class="language-code">bh</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=bi">Bislama</a><span class="language-code">bi</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=bs">Bosnian</a><span class="language-code">bs</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=br">Breton</a><span class="language-code">br</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=bg">Bulgarian</a><span class="language-code">bg</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=my">Burmese</a><span class="language-code">my</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ca">Catalan</a><span class="language-code">ca</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ch">Chamorro</a><span class="language-code">ch</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ce">Chechen</a><span class="language-code">ce</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ny">Chichewa</a><span class="language-code">ny</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=zh">Chinese</a><span class="language-code">zh</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=cv">Chuvash</a><span class="language-code">cv</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=kw">Cornish</a><span class="language-code">kw</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=co">Corsican</a><span class="language-code">co</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=cr">Cree</a><span class="language-code">cr</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=hr">Croatian</a><span class="language-code">hr</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=cs">Czech</a><span class="language-code">cs</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=da">Danish</a><span class="language-code">da</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=dv">Divehi</a><span class="language-code">dv</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=nl">Dutch</a><span class="language-code">nl</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=dz">Dzongkha</a><span class="language-code">dz</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=en">English</a><span class="language-code">en</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=eo">Esperanto</a><span class="language-code">eo</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=et">Estonian</a><span class="language-code">et</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ee">Ewe</a><span class="language-code">ee</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=fo">Faroese</a><span class="language-code">fo</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=fj">Fijian</a><span class="language-code">fj</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=fi">Finnish</a><span class="language-code">fi</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=fr">French</a><span class="language-code">fr</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ff">Fula</a><span class="language-code">ff</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=gl">Galician</a><span class="language-code">gl</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ka">Georgian</a><span class="language-code">ka</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=de">German</a><span class="language-code">de</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=el">Greek</a><span class="language-code">el</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=gn">Guaraní</a><span class="language-code">gn</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=gu">Gujarati</a><span class="language-code">gu</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ht">Haitian</a><span class="language-code">ht</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ha">Hausa</a><span class="language-code">ha</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=he">Hebrew</a><span class="language-code">he</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=hz">Herero</a><span class="language-code">hz</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=hi">Hindi</a><span class="language-code">hi</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ho">Hiri Motu</a><span class="language-code">ho</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=hu">Hungarian</a><span class="language-code">hu</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ia">Interlingua</a><span class="language-code">ia</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=id">Indonesian</a><span class="language-code">id</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ie">Interlingue</a><span class="language-code">ie</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ga">Irish</a><span class="language-code">ga</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ig">Igbo</a><span class="language-code">ig</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ik">Inupiaq</a><span class="language-code">ik</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=io">Ido</a><span class="language-code">io</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=is">Icelandic</a><span class="language-code">is</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=it">Italian</a><span class="language-code">it</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=iu">Inuktitut</a><span class="language-code">iu</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ja">Japanese</a><span class="language-code">ja</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=jv">Javanese</a><span class="language-code">jv</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=kl">Kalaallisut</a><span class="language-code">kl</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=kn">Kannada</a><span class="language-code">kn</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=kr">Kanuri</a><span class="language-code">kr</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ks">Kashmiri</a><span class="language-code">ks</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=kk">Kazakh</a><span class="language-code">kk</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=km">Khmer</a><span class="language-code">km</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ki">Kikuyu</a><span class="language-code">ki</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=rw">Kinyarwanda</a><span class="language-code">rw</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ky">Kyrgyz</a><span class="language-code">ky</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=kv">Komi</a><span class="language-code">kv</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=kg">Kongo</a><span class="language-code">kg</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ko">Korean</a><span class="language-code">ko</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ku">Kurdish</a><span class="language-code">ku</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=kj">Kwanyama</a><span class="language-code">kj</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=la">Latin</a><span class="language-code">la</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=lb">Luxembourgish</a><span class="language-code">lb</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=lg">Ganda</a><span class="language-code">lg</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=li">Limburgish</a><span class="language-code">li</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ln">Lingala</a><span class="language-code">ln</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=lo">Lao</a><span class="language-code">lo</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=lt">Lithuanian</a><span class="language-code">lt</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=lu">Luba-Katanga</a><span class="language-code">lu</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=lv">Latvian</a><span class="language-code">lv</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=gv">Manx</a><span class="language-code">gv</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=mk">Macedonian</a><span class="language-code">mk</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=mg">Malagasy</a><span class="language-code">mg</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ms">Malay</a><span class="language-code">ms</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ml">Malayalam</a><span class="language-code">ml</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=mt">Maltese</a><span class="language-code">mt</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=mi">Māori</a><span class="language-code">mi</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=mr">Marathi</a><span class="language-code">mr</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=mh">Marshallese</a><span class="language-code">mh</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=mn">Mongolian</a><span class="language-code">mn</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=na">Nauru</a><span class="language-code">na</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=nv">Navajo</a><span class="language-code">nv</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=nd">North Ndebele</a><span class="language-code">nd</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ne">Nepali</a><span class="language-code">ne</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ng">Ndonga</a><span class="language-code">ng</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=nb">Norwegian Bokmål</a><span class="language-code">nb</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=nn">Norwegian Nynorsk</a><span class="language-code">nn</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=no">Norwegian</a><span class="language-code">no</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ii">Nuosu</a><span class="language-code">ii</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=nr">South Ndebele</a><span class="language-code">nr</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=oc">Occitan</a><span class="language-code">oc</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=oj">Ojibwe</a><span class="language-code">oj</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=cu">Old Church Slavonic</a><span class="language-code">cu</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=om">Oromo</a><span class="language-code">om</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=or">Oriya</a><span class="language-code">or</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=os">Ossetian</a><span class="language-code">os</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=pa">Panjabi</a><span class="language-code">pa</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=pi">Pāli</a><span class="language-code">pi</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=fa">Persian</a><span class="language-code">fa</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=pl">Polish</a><span class="language-code">pl</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ps">Pashto</a><span class="language-code">ps</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=pt">Portuguese</a><span class="language-code">pt</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=qu">Quechua</a><span class="language-code">qu</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=rm">Romansh</a><span class="language-code">rm</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=rn">Kirundi</a><span class="language-code">rn</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ro">Romanian</a><span class="language-code">ro</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ru">Russian</a><span class="language-code">ru</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sa">Sanskrit</a><span class="language-code">sa</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sc">Sardinian</a><span class="language-code">sc</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sd">Sindhi</a><span class="language-code">sd</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=se">Northern Sami</a><span class="language-code">se</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sm">Samoan</a><span class="language-code">sm</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sg">Sango</a><span class="language-code">sg</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sr">Serbian</a><span class="language-code">sr</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=gd">Scottish Gaelic</a><span class="language-code">gd</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sn">Shona</a><span class="language-code">sn</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=si">Sinhala</a><span class="language-code">si</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sk">Slovak</a><span class="language-code">sk</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sl">Slovenian</a><span class="language-code">sl</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=so">Somali</a><span class="language-code">so</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=st">Southern Sotho</a><span class="language-code">st</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=es">Spanish</a><span class="language-code">es</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=su">Sundanese</a><span class="language-code">su</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sw">Swahili</a><span class="language-code">sw</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ss">Swati</a><span class="language-code">ss</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=sv">Swedish</a><span class="language-code">sv</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ta">Tamil</a><span class="language-code">ta</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=te">Telugu</a><span class="language-code">te</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=tg">Tajik</a><span class="language-code">tg</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=th">Thai</a><span class="language-code">th</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ti">Tigrinya</a><span class="language-code">ti</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=bo">Tibetan</a><span class="language-code">bo</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=tk">Turkmen</a><span class="language-code">tk</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=tl">Tagalog</a><span class="language-code">tl</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=tn">Tswana</a><span class="language-code">tn</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=to">Tonga</a><span class="language-code">to</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=tr">Turkish</a><span class="language-code">tr</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ts">Tsonga</a><span class="language-code">ts</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=tt">Tatar</a><span class="language-code">tt</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=tw">Twi</a><span class="language-code">tw</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ty">Tahitian</a><span class="language-code">ty</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ug">Uyghur</a><span class="language-code">ug</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=uk">Ukrainian</a><span class="language-code">uk</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ur">Urdu</a><span class="language-code">ur</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=uz">Uzbek</a><span class="language-code">uz</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=ve">Venda</a><span class="language-code">ve</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=vi">Vietnamese</a><span class="language-code">vi</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=vo">Volapük</a><span class="language-code">vo</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=wa">Walloon</a><span class="language-code">wa</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=cy">Welsh</a><span class="language-code">cy</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=wo">Wolof</a><span class="language-code">wo</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=fy">Western Frisian</a><span class="language-code">fy</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=xh">Xhosa</a><span class="language-code">xh</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=yi">Yiddish</a><span class="language-code">yi</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=yo">Yoruba</a><span class="language-code">yo</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=za">Zhuang</a><span class="language-code">za</span></div>
+                <div class="language-card"><a href="https://github.com/trending?spoken_language_code=zu">Zulu</a><span class="language-code">zu</span></div>
+            </div>
+
+            <!-- Developers -->
+            <div class="developers-section">
+                <h2 style="margin-bottom: 20px;">👨‍💻 Trending Developers</h2>
+                <a href="https://github.com/trending/developers" style="font-size: 1.2em;">Trending Developers</a>
+                <span class="priority-badge">0.8</span>
+            </div>
+
+            <a href="index.html" class="back-button">← Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>
