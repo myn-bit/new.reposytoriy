@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресурсы и статьи GitHub - Карта сайта</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a3a2a, #0f2a1a);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #24292e, #1a3a2a);
+            color: white;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
+            border-bottom: 4px solid #10b981;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            background: #1e293b;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #10b981;
+            text-decoration: none;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .topic-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 25px;
+            border-top: 4px solid #10b981;
+        }
+
+        .topic-card h2 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .article-list {
+            list-style: none;
+        }
+
+        .article-list li {
+            margin-bottom: 12px;
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .article-list a {
+            color: #0366d6;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-list a:hover {
+            color: #10b981;
+        }
+
+        .priority-badge {
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+
+        .priority-09 { background: #4ade80; color: #1e293b; }
+        .priority-08 { background: #3b82f6; color: white; }
+
+        .pagination {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .page-link {
+            padding: 5px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .page-link:hover {
+            background: #10b981;
+            color: white;
+            border-color: #10b981;
+        }
+
+        .whitepapers-section {
+            background: #f1f5f9;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #10b981;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Ресурсы и статьи GitHub</h1>
+            <p>Блоги, whitepapers, обучающие материалы</p>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> > <span>Ресурсы</span>
+        </div>
+
+        <div class="content">
+            <div class="topic-grid">
+                <!-- AI Topics -->
+                <div class="topic-card">
+                    <h2>🤖 AI</h2>
+                    <ul class="article-list">
+                        <li><a href="https://github.com/resources/articles?topic=ai" target="_blank">All AI Articles <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=ai&page=1" target="_blank">AI - Page 1 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=ai&page=2" target="_blank">AI - Page 2 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-unsupervised-learning" target="_blank">Unsupervised Learning <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-prompt-engineering" target="_blank">Prompt Engineering <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-generative-ai-genai" target="_blank">Generative AI <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-are-neural-networks" target="_blank">Neural Networks <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-open-source-ai" target="_blank">Open Source AI <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-vibe-coding" target="_blank">Vibe Coding <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-agentic-ai" target="_blank">Agentic AI <span class="priority-badge priority-08">0.8</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Software Development -->
+                <div class="topic-card">
+                    <h2>💻 Software Development</h2>
+                    <ul class="article-list">
+                        <li><a href="https://github.com/resources/articles?topic=software-development" target="_blank">All Dev Articles <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=software-development&page=1" target="_blank">Dev - Page 1 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=software-development&page=2" target="_blank">Dev - Page 2 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=software-development&page=3" target="_blank">Dev - Page 3 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-an-ide" target="_blank">What is an IDE? <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-a-cli" target="_blank">What is a CLI? <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-an-api" target="_blank">What is an API? <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-sdlc" target="_blank">SDLC <span class="priority-badge priority-08">0.8</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- DevOps -->
+                <div class="topic-card">
+                    <h2>⚙️ DevOps</h2>
+                    <ul class="article-list">
+                        <li><a href="https://github.com/resources/articles?topic=devops" target="_blank">All DevOps Articles <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=devops&page=1" target="_blank">DevOps - Page 1 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=devops&page=2" target="_blank">DevOps - Page 2 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-devsecops" target="_blank">What is DevSecOps? <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-devops" target="_blank">What is DevOps? <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/ci-cd" target="_blank">CI/CD <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/continuous-integration" target="_blank">Continuous Integration <span class="priority-badge priority-08">0.8</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Security -->
+                <div class="topic-card">
+                    <h2>🔒 Security</h2>
+                    <ul class="article-list">
+                        <li><a href="https://github.com/resources/articles?topic=security" target="_blank">All Security Articles <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=security&page=1" target="_blank">Security - Page 1 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles?topic=security&page=2" target="_blank">Security - Page 2 <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-an-sbom-software-bill-of-materials" target="_blank">SBOM <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-code-scanning" target="_blank">Code Scanning <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/resources/articles/what-is-secret-scanning" target="_blank">Secret Scanning <span class="priority-badge priority-08">0.8</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- All Articles Pagination -->
+            <div style="margin: 30px 0;">
+                <h3>📑 Все статьи (по страницам)</h3>
+                <div class="pagination">
+                    <a href="https://github.com/resources/articles?page=1" class="page-link">1</a>
+                    <a href="https://github.com/resources/articles?page=2" class="page-link">2</a>
+                    <a href="https://github.com/resources/articles?page=3" class="page-link">3</a>
+                    <a href="https://github.com/resources/articles?page=4" class="page-link">4</a>
+                    <a href="https://github.com/resources/articles?page=5" class="page-link">5</a>
+                    <a href="https://github.com/resources/articles?page=6" class="page-link">6</a>
+                    <a href="https://github.com/resources/articles?page=7" class="page-link">7</a>
+                </div>
+            </div>
+
+            <!-- Whitepapers -->
+            <div class="whitepapers-section">
+                <h2 style="margin-bottom: 20px;">📄 Whitepapers</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px;">
+                    <a href="https://github.com/resources/whitepapers/forrester" target="_blank">Forrester Report</a>
+                    <a href="https://github.com/resources/whitepapers/forrester-wave-2025" target="_blank">Forrester Wave 2025</a>
+                    <a href="https://github.com/resources/whitepapers/gartner-magic-quadrant-and-critical-capabilities-for-ai-code-assistants" target="_blank">Gartner AI Code Assistants</a>
+                    <a href="https://github.com/resources/whitepapers/idc-marketscape-ai-coding-software-engineering-2025" target="_blank">IDC MarketScape</a>
+                    <a href="https://github.com/resources/whitepapers/enterprise-octoverse" target="_blank">Enterprise Octoverse</a>
+                    <a href="https://github.com/resources/whitepapers/how-to-capture-ai-driven-productivity-gains-across-the-sdlc" target="_blank">AI Productivity Gains</a>
+                    <a href="https://github.com/resources/whitepapers/solutions-for-government" target="_blank">Government Solutions</a>
+                    <a href="https://github.com/resources/whitepapers/agentic-ai-security-and-devops" target="_blank">Agentic AI Security</a>
+                </div>
+                <div style="margin-top: 20px;">
+                    <strong>Pagination:</strong>
+                    <a href="https://github.com/resources/whitepapers?page=1" style="margin-right: 10px;">1</a>
+                    <a href="https://github.com/resources/whitepapers?page=2" style="margin-right: 10px;">2</a>
+                    <a href="https://github.com/resources/whitepapers?page=3" style="margin-right: 10px;">3</a>
+                    <a href="https://github.com/resources/whitepapers?page=4" style="margin-right: 10px;">4</a>
+                    <a href="https://github.com/resources/whitepapers?page=5">5</a>
+                </div>
+            </div>
+
+            <!-- Events -->
+            <div style="margin-top: 30px;">
+                <h3>📅 Events</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; background: #f8fafc; padding: 20px; border-radius: 15px;">
+                    <a href="https://github.com/resources/events/github-rsac2026" target="_blank">RSA Conference 2026</a>
+                    <a href="https://github.com/resources/events/github-connect-toronto26" target="_blank">GitHub Connect Toronto</a>
+                    <a href="https://github.com/resources/events/github-gcn2026" target="_blank">GitHub GCN 2026</a>
+                    <a href="https://github.com/resources/events/github-kuwc-part-one26" target="_blank">KUWC Part 1</a>
+                    <a href="https://github.com/resources/events/github-kuwc-part-two26" target="_blank">KUWC Part 2</a>
+                </div>
+                <div class="pagination" style="margin-top: 10px;">
+                    <a href="https://github.com/resources/events?page=1" class="page-link">1</a>
+                    <a href="https://github.com/resources/events?page=2" class="page-link">2</a>
+                </div>
+            </div>
+
+            <!-- Insights -->
+            <div style="margin-top: 30px; background: #f1f5f9; padding: 20px; border-radius: 15px;">
+                <h3>📊 Insights</h3>
+                <a href="https://github.com/resources/insights?locale=en-US" target="_blank">Insights (en-US)</a><br>
+                <a href="https://github.com/resources/insights/2026-pricing-changes-for-github-actions?locale=en-US" target="_blank">2026 Pricing Changes for Actions</a>
+            </div>
+
+            <a href="index.html" class="back-button">← Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>
