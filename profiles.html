@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профили пользователей - Карта сайта GitHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a2a3a, #0f1f2a);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #24292e, #1a2a3a);
+            color: white;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
+            border-bottom: 4px solid #3b82f6;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            background: #1e293b;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .profile-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59,130,246,0.1);
+            border-color: #3b82f6;
+        }
+
+        .profile-card a {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .profile-card a:hover {
+            color: #3b82f6;
+        }
+
+        .profile-meta {
+            margin-top: 8px;
+            font-size: 0.85em;
+            color: #64748b;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            background: #3b82f6;
+            color: white;
+            margin-left: 8px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #1e293b;
+            margin: 30px 0 20px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+        }
+
+        .org-section {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👤 Профили пользователей и организаций</h1>
+            <p>Аккаунты разработчиков и компаний</p>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> > <span>Профили</span>
+        </div>
+
+        <div class="content">
+            <h2 class="section-title">👨‍💻 Пользователи</h2>
+            <div class="profiles-grid">
+                <div class="profile-card"><a href="https://github.com/moraesc" target="_blank">moraesc</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/shinybrightstar" target="_blank">shinybrightstar</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/mecodeatlas" target="_blank">mecodeatlas</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/ghostinhershell" target="_blank">ghostinhershell</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Sriramvellikad07" target="_blank">Sriramvellikad07</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/floydn" target="_blank">floydn</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/arnaudjund" target="_blank">arnaudjund</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/elias6720" target="_blank">elias6720</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/lnwu" target="_blank">lnwu</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sardorazimov" target="_blank">sardorazimov</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/ADITYABHURAN" target="_blank">ADITYABHURAN</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/2030mmohmad2030-bot" target="_blank">2030mmohmad2030-bot</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/abflh-beep" target="_blank">abflh-beep</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/TheChampu" target="_blank">TheChampu</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/nehzata" target="_blank">nehzata</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Ngonj" target="_blank">Ngonj</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/pmg007" target="_blank">pmg007</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/MasteraSnackin" target="_blank">MasteraSnackin</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/thawatchaiwattanachok-alt" target="_blank">thawatchaiwattanachok-alt</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Sophiejohny" target="_blank">Sophiejohny</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/vagishacts" target="_blank">vagishacts</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/xavidop" target="_blank">xavidop</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/ThiefMaster" target="_blank">ThiefMaster</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sreeshanth-soma" target="_blank">sreeshanth-soma</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/6qxyxs6rn7-gaibs" target="_blank">6qxyxs6rn7-gaibs</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/NazmusSayad" target="_blank">NazmusSayad</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/taufiq-nlp" target="_blank">taufiq-nlp</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/queenofcorgis" target="_blank">queenofcorgis</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/thaciogm" target="_blank">thaciogm</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/25Elisheba" target="_blank">25Elisheba</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Grantcas" target="_blank">Grantcas</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/ProfesorFireKingAIcatalyst" target="_blank">ProfesorFireKingAIcatalyst</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Hzaatiti" target="_blank">Hzaatiti</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sujalnarkar" target="_blank">sujalnarkar</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/mateusht-ciandt" target="_blank">mateusht-ciandt</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/yuanchen-zhu" target="_blank">yuanchen-zhu</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/gabmis" target="_blank">gabmis</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/simon-knu" target="_blank">simon-knu</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sparmboy" target="_blank">sparmboy</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Acorath" target="_blank">Acorath</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Kurt-von-Laven" target="_blank">Kurt-von-Laven</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/renozao" target="_blank">renozao</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/lee-dohm" target="_blank">lee-dohm</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/wlannistamps" target="_blank">wlannistamps</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/tsolegnanu" target="_blank">tsolegnanu</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/CodeWithPritom" target="_blank">CodeWithPritom</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Ahthe" target="_blank">Ahthe</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/duby229" target="_blank">duby229</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/kokatesaurabh" target="_blank">kokatesaurabh</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/dmdr" target="_blank">dmdr</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Akash1134" target="_blank">Akash1134</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/willmarcondeseso" target="_blank">willmarcondeseso</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/inkblotty" target="_blank">inkblotty</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Fred638" target="_blank">Fred638</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/healer0805" target="_blank">healer0805</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/midiakiasat" target="_blank">midiakiasat</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/my-project-world" target="_blank">my-project-world</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Manzi-Elvis" target="_blank">Manzi-Elvis</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Purrbyte-zdy" target="_blank">Purrbyte-zdy</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Santosh-Prasad-Verma" target="_blank">Santosh-Prasad-Verma</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/ajmallesh" target="_blank">ajmallesh</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/claude" target="_blank">claude</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/keygraphVarun" target="_blank">keygraphVarun</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Khaushik-keygraph" target="_blank">Khaushik-keygraph</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/nelliekeygraph" target="_blank">nelliekeygraph</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/samuelcolvin" target="_blank">samuelcolvin</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/davidhewitt" target="_blank">davidhewitt</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/petyosi" target="_blank">petyosi</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/DouweM" target="_blank">DouweM</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/gverma-openai" target="_blank">gverma-openai</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/dkundel-openai" target="_blank">dkundel-openai</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/vb-openai" target="_blank">vb-openai</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/ae-openai" target="_blank">ae-openai</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/quuu" target="_blank">quuu</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/virattt" target="_blank">virattt</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/MkDev11" target="_blank">MkDev11</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/gupta-8" target="_blank">gupta-8</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sjhddh" target="_blank">sjhddh</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/bittoby" target="_blank">bittoby</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/jaybosamiya-ms" target="_blank">jaybosamiya-ms</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/CvvT" target="_blank">CvvT</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/jstarks" target="_blank">jstarks</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sangho2" target="_blank">sangho2</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Icegrave0391" target="_blank">Icegrave0391</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/aksg87" target="_blank">aksg87</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/kleeena" target="_blank">kleeena</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/mariano" target="_blank">mariano</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/tonebeta" target="_blank">tonebeta</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/obra" target="_blank">obra</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/arittr" target="_blank">arittr</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/clkao" target="_blank">clkao</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/jjshanks" target="_blank">jjshanks</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/yiranyyu" target="_blank">yiranyyu</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/iceflame89" target="_blank">iceflame89</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/yaoyuanTHU" target="_blank">yaoyuanTHU</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/tc-mb" target="_blank">tc-mb</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/YuzaChongyi" target="_blank">YuzaChongyi</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/davydkov" target="_blank">davydkov</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/pavelpykhtin" target="_blank">pavelpykhtin</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/kuishou68" target="_blank">kuishou68</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/halvee-tech" target="_blank">halvee-tech</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/IceyLiu" target="_blank">IceyLiu</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/goworm" target="_blank">goworm</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/pvizeli" target="_blank">pvizeli</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/agners" target="_blank">agners</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/frenck" target="_blank">frenck</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/raman325" target="_blank">raman325</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/krlvi" target="_blank">krlvi</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/estib-vega" target="_blank">estib-vega</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/mtsgrd" target="_blank">mtsgrd</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/ngalaiko" target="_blank">ngalaiko</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/Caleb-T-Owens" target="_blank">Caleb-T-Owens</a><span class="priority-badge">0.8</span></div>
+            </div>
+
+            <h2 class="section-title">🏢 Организации и команды</h2>
+            <div class="org-section">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+                    <a href="https://github.com/github" target="_blank">@github</a>
+                    <a href="https://github.com/microsoft" target="_blank">@microsoft</a>
+                    <a href="https://github.com/openai" target="_blank">@openai</a>
+                    <a href="https://github.com/google" target="_blank">@google</a>
+                    <a href="https://github.com/community" target="_blank">@community</a>
+                    <a href="https://github.com/KeygraphHQ" target="_blank">@KeygraphHQ</a>
+                    <a href="https://github.com/pydantic" target="_blank">@pydantic</a>
+                    <a href="https://github.com/OpenBMB" target="_blank">@OpenBMB</a>
+                    <a href="https://github.com/likec4" target="_blank">@likec4</a>
+                    <a href="https://github.com/iOfficeAI" target="_blank">@iOfficeAI</a>
+                    <a href="https://github.com/home-assistant" target="_blank">@home-assistant</a>
+                    <a href="https://github.com/gitbutlerapp" target="_blank">@gitbutlerapp</a>
+                </div>
+            </div>
+
+            <!-- Apps and Bots -->
+            <h2 class="section-title">🤖 Apps & Bots</h2>
+            <div class="profiles-grid">
+                <div class="profile-card"><a href="https://github.com/apps/dependabot" target="_blank">@dependabot</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/apps/renovate" target="_blank">@renovate</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/apps/likec4-ci" target="_blank">@likec4-ci</a><span class="priority-badge">0.8</span></div>
+            </div>
+
+            <!-- Sponsors -->
+            <h2 class="section-title">❤️ GitHub Sponsors</h2>
+            <div class="profiles-grid">
+                <div class="profile-card"><a href="https://github.com/sponsors/Lissy93" target="_blank">@Lissy93</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sponsors/tjbck" target="_blank">@tjbck</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sponsors/curl" target="_blank">@curl</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sponsors/pydantic" target="_blank">@pydantic</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sponsors/obra" target="_blank">@obra</a><span class="priority-badge">0.8</span></div>
+                <div class="profile-card"><a href="https://github.com/sponsors/likec4" target="_blank">@likec4</a><span class="priority-badge">0.8</span></div>
+            </div>
+
+            <a href="index.html" class="back-button">← Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>
