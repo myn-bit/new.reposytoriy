@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise и решения - Карта сайта GitHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a2a3a, #0f1a2a);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #24292e, #1a2a3a);
+            color: white;
+            padding: 40px;
+            border-radius: 30px 30px 0 0;
+            border-bottom: 4px solid #f59e0b;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            background: #1e293b;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .breadcrumb a {
+            color: #f59e0b;
+            text-decoration: none;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .solution-card {
+            background: linear-gradient(135deg, #f8fafc, #ffffff);
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.3s;
+            border-top: 4px solid #f59e0b;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+        }
+
+        .solution-card h2 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .solution-card h2 i {
+            margin-right: 10px;
+        }
+
+        .solution-links {
+            list-style: none;
+        }
+
+        .solution-links li {
+            margin-bottom: 12px;
+            padding: 5px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .solution-links a {
+            color: #0366d6;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .solution-links a:hover {
+            color: #f59e0b;
+        }
+
+        .priority-badge {
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+
+        .priority-09 { background: #4ade80; color: #1e293b; }
+        .priority-08 { background: #3b82f6; color: white; }
+
+        .industry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .industry-tag {
+            background: #f1f5f9;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #475569;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #f59e0b;
+            color: #24292e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏢 Enterprise и корпоративные решения</h1>
+            <p>Решения для бизнеса, стартапов и государственных организаций</p>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> > <span>Enterprise</span>
+        </div>
+
+        <div class="content">
+            <div class="solutions-grid">
+                <!-- Enterprise Plans -->
+                <div class="solution-card">
+                    <h2><i>📊</i> Enterprise планы</h2>
+                    <ul class="solution-links">
+                        <li><a href="https://github.com/enterprise" target="_blank">GitHub Enterprise <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/enterprise?locale=en-US" target="_blank">Enterprise (en-US) <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/enterprise/premium-support" target="_blank">Premium Support <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/enterprise/premium-support?locale=en-US" target="_blank">Premium Support (en-US) <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/enterprise/advanced-security" target="_blank">Advanced Security <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/enterprise/advanced-security?locale=en-US" target="_blank">Advanced Security (en-US) <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/enterprise/data-residency" target="_blank">Data Residency <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/enterprise/trial" target="_blank">Enterprise Trial <span class="priority-badge priority-08">0.8</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Startups -->
+                <div class="solution-card">
+                    <h2><i>🚀</i> Стартапы</h2>
+                    <ul class="solution-links">
+                        <li><a href="https://github.com/enterprise/startups" target="_blank">GitHub for Startups <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/enterprise/startups?locale=en-US" target="_blank">Startups (en-US) <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/enterprise/startups/partners" target="_blank">Startup Partners <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/accelerator" target="_blank">Accelerator <span class="priority-badge priority-09">0.9</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Industry Solutions -->
+                <div class="solution-card">
+                    <h2><i>🏭</i> Индустриальные решения</h2>
+                    <ul class="solution-links">
+                        <li><a href="https://github.com/solutions/industry" target="_blank">All Industries <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/industry?locale=en-US" target="_blank">Industries (en-US) <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/solutions/industry/healthcare" target="_blank">Healthcare <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/industry/financial-services" target="_blank">Financial Services <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/industry/manufacturing" target="_blank">Manufacturing <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/industry/government" target="_blank">Government <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/industry/nonprofits" target="_blank">Nonprofits <span class="priority-badge priority-09">0.9</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Use Cases -->
+                <div class="solution-card">
+                    <h2><i>🎯</i> Сценарии использования</h2>
+                    <ul class="solution-links">
+                        <li><a href="https://github.com/solutions/use-case" target="_blank">All Use Cases <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/use-case?locale=en-US" target="_blank">Use Cases (en-US) <span class="priority-badge priority-08">0.8</span></a></li>
+                        <li><a href="https://github.com/solutions/use-case/app-modernization" target="_blank">App Modernization <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/use-case/devsecops" target="_blank">DevSecOps <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/use-case/devops" target="_blank">DevOps <span class="priority-badge priority-09">0.9</span></a></li>
+                        <li><a href="https://github.com/solutions/use-case/ci-cd" target="_blank">CI/CD <span class="priority-badge priority-09">0.9</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Executive Insights & Contact -->
+            <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="background: #f1f5f9; padding: 20px; border-radius: 15px;">
+                    <h3 style="margin-bottom: 15px;">📈 Executive Insights</h3>
+                    <a href="https://github.com/solutions/executive-insights" target="_blank">Executive Insights</a>
+                    <span class="priority-badge priority-09">0.9</span>
+                    <a href="https://github.com/solutions/executive-insights?locale=en-US" target="_blank" style="display: block; margin-top: 10px;">Executive Insights (en-US) <span class="priority-badge priority-08">0.8</span></a>
+                </div>
+                <div style="background: #f1f5f9; padding: 20px; border-radius: 15px;">
+                    <h3 style="margin-bottom: 15px;">📞 Контакты</h3>
+                    <a href="https://github.com/enterprise/contact" target="_blank">Contact Enterprise</a>
+                    <span class="priority-badge priority-08">0.8</span>
+                    <a href="https://github.com/enterprise/contact/data-residency" target="_blank" style="display: block; margin-top: 10px;">Data Residency Contact <span class="priority-badge priority-08">0.8</span></a>
+                </div>
+            </div>
+
+            <!-- Industry Tags -->
+            <div style="margin-top: 30px;">
+                <h3>Индустрии</h3>
+                <div class="industry-tags">
+                    <span class="industry-tag">Healthcare</span>
+                    <span class="industry-tag">Financial Services</span>
+                    <span class="industry-tag">Manufacturing</span>
+                    <span class="industry-tag">Government</span>
+                    <span class="industry-tag">Nonprofits</span>
+                    <span class="industry-tag">Retail</span>
+                    <span class="industry-tag">Education</span>
+                    <span class="industry-tag">Technology</span>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-button">← Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>
